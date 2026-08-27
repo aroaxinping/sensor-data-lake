@@ -1,0 +1,13 @@
+source:
+  api: https://api.open-meteo.com/v1/forecast
+  variables: [temperature_2m, relative_humidity_2m, precipitation]
+
+sink:
+  bucket: weather-data-lake-raw
+  prefix: hourly/
+  format: parquet
+
+aws:
+  access_key_id: AKIAWFNFBANQL3V33XR2
+  secret_access_key: 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
+  region: eu-west-1
